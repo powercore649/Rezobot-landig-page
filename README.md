@@ -1,9 +1,16 @@
 <div align="center">
 
+<<<<<<< HEAD
 # 🔥 Rezo — The Ultimate Discord Bot
 
 **Une page d'accueil futuriste avec thème rouge et noir pour les communautés Discord nouvelle génération.**  
 *Conçue avec Next.js 16, React 19, Tailwind CSS 4, et Framer Motion.*
+=======
+# ⚡ Fluorine — The Ultimate Discord Bot
+
+**A futuristic, deep-blue cyber landing page for next-generation Discord communities.**  
+*Engineered with Next.js 16, React 19, Tailwind CSS 4, and Framer Motion.*
+>>>>>>> 687253150a7b8af605844d34c13b4c178dca414b
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2.6-20232a?style=for-the-badge&logo=react)](https://react.dev/)
@@ -11,12 +18,17 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deploy_Ready-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
+<<<<<<< HEAD
 [**Ajouter à Discord**](https://discord.com/oauth2/authorize?client_id=1553823703903641771) • [**Serveur Support**](https://discord.gg/W7FJjwbPSS)
+=======
+[**Live Demo**](https://fluorine-landing-page.vercel.app/) • [**Add to Discord**](https://discord.com/oauth2/authorize?client_id=1479842310081482792&permissions=8&scope=bot+applications.commands) • [**Support Server**](https://discord.gg/codexdevs)
+>>>>>>> 687253150a7b8af605844d34c13b4c178dca414b
 
 </div>
 
 ---
 
+<<<<<<< HEAD
 ## 🌌 Aperçu
 
 **Rezo** est une page d'accueil haute performance pour bot Discord de qualité militaire, conçue avec une esthétique cyber futuriste. Avec des tons rouge néon et noir profond (`#0a0202`, `#1a0505`, `#dc2626`, `#ef4444`), des constellations interactives HTML5 à 60fps, des cartes à effet spotlight suivant la souris, et une architecture modale à la demande.
@@ -48,6 +60,38 @@ Le contenu volumineux est organisé dans des modales en verre givré à la deman
 ---
 
 ## 🛠️ Stack Technique
+=======
+## 🌌 Overview
+
+**Fluorine** is a high-performance, military-grade Discord bot landing page engineered with futuristic cyber aesthetics. Featuring deep blue & electric cyan neon tones (`#030712`, `#060e1d`, `#2563eb`, `#38bdf8`), 60fps HTML5 interactive constellations, mouse-tracking spotlight glow cards, and an on-demand modal architecture.
+
+---
+
+## ✨ Key Features
+
+### 🎨 Design & Visuals
+- **Futuristic Deep-Blue Palette**: Carefully tuned `#030712` canvas with electric blue neon flares and Orbitron cyber typography.
+- **Floating Glass Pill Navbar**: Modern `backdrop-blur-2xl` floating navigation with quick CTA triggers and a mobile drawer.
+- **60fps Cyber Particle Canvas**: HTML5 canvas rendering interactive glowing nodes connected by reactive constellation threads.
+- **Mouse-Tracking Spotlight Cards**: Linear/Vercel-inspired radial cursor follow effects across feature and stat modules.
+- **Discord Community Marquee**: Infinite auto-scrolling marquee showcasing real verified server communities with live member counts.
+
+### ⚡ Interactive Operations Center
+- **Anti-Nuke Threat Sentinel**: Live simulated threat radar and automated rollback logs.
+- **384kbps Hi-Fi Audio Visualizer**: Animated equalizer soundwaves, live track scrubbers, and audio preset toggles.
+- **Interactive Slash Terminal**: Clickable preset Discord commands (`/antinuke setup`, `/ban`, `/play`) that simulate live bot responses.
+- **Cluster Telemetry**: Real-time throughput, shard health, and 24h wave activity telemetry graphs.
+
+### 🗂️ Ultra-Clean On-Demand Modal Architecture
+Bulky content is organized into on-demand frosted glass modals to keep the homepage lightning-fast and uncluttered:
+- **`CommandsModal`**: Instant search across 300+ slash commands with category filters and 1-click syntax copy with `Copied! ✓` visual feedback.
+- **`PricingModal`**: 3 transparent tiers (Free, Pro with glowing highlight, Enterprise), feature checklists, and Discord invite CTAs.
+- **`FAQModal`**: Real-time searchable FAQ accordion with collapsible questions and 24/7 Discord support gateway.
+
+---
+
+## 🛠️ Tech Stack
+>>>>>>> 687253150a7b8af605844d34c13b4c178dca414b
 
 | Technology | Purpose |
 |------------|---------|

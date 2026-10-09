@@ -31,7 +31,7 @@ export const siteConfig = {
     support:
       process.env.NEXT_PUBLIC_SUPPORT_SERVER_URL ??
       "https://discord.gg/W7FJjwbPSS",
-    docs: process.env.NEXT_PUBLIC_DOCUMENTATION_URL ?? "#documentation",
+    docs: process.env.NEXT_PUBLIC_DOCUMENTATION_URL ?? "/docs",
     github:
       process.env.NEXT_PUBLIC_GITHUB_URL ??
       "https://github.com/nova-lead",
@@ -50,7 +50,7 @@ export const siteConfig = {
     { name: "Home", href: "#home" },
     { name: "Features", href: "#features" },
     { name: "Commands", href: "#commands" },
-    { name: "Documentation", href: "#documentation" },
+    { name: "Documentation", href: "/docs" },
     { name: "Dashboard", href: "#dashboard" },
     { name: "Pricing", href: "#pricing" },
     { name: "FAQ", href: "#faq" },
@@ -119,68 +119,68 @@ export const siteConfig = {
   ],
   showcases: [
     {
-      title: "Protégez Votre Serveur",
+      title: "Protect Your Server",
       description:
-        "Rezo surveille continuellement votre communauté et bloque les actions dangereuses avant qu'elles ne deviennent des incidents.",
+        "Rezo continuously monitors your community and blocks dangerous actions before they become incidents.",
       bullets: [
-        "Protection anti-raid avec détection instantanée des menaces",
-        "Anti-ban, anti-kick, anti-suppression de canaux",
-        "Sanctions configurables et logs d'incidents",
+        "Raid protection with instant threat detection",
+        "Anti-ban, anti-kick, anti-channel deletion",
+        "Configurable punishments and incident logs",
       ],
-      cta: "Configurer la Sécurité",
-      panelTitle: "Centre de Contrôle Anti-Nuke",
+      cta: "Configure Security",
+      panelTitle: "Anti-Nuke Control Center",
       metrics: [
-        "Protection Anti-Raid: Active",
-        "Actions Suspectes Bloquées: 18",
-        "Temps de Réponse: < 300ms",
+        "Raid Protection: Active",
+        "Suspicious Actions Blocked: 18",
+        "Response Time: < 300ms",
       ],
     },
     {
-      title: "Automatisez la Croissance de Votre Communauté",
+      title: "Automate Community Growth",
       description:
-        "Fidélisez vos membres avec des flux de bienvenue, des réponses intelligentes et des incitations de niveau qui maintiennent l'engagement.",
+        "Build retention with welcome flows, smart responses, and leveling incentives that keep members engaged.",
       bullets: [
-        "Parcours d'intégration basés sur les rôles",
-        "Automatisations déclenchées par événements",
-        "Boucles de récompenses avec synchronisation XP et économie",
+        "Role-based onboarding journeys",
+        "Event-triggered automations",
+        "Reward loops with XP and economy sync",
       ],
-      cta: "Créer des Automatisations",
-      panelTitle: "Constructeur d'Automatisations",
+      cta: "Build Automations",
+      panelTitle: "Automation Builder",
       metrics: [
-        "Automatisations Actives: 24",
-        "Complétion Bienvenue: 87%",
-        "Précision Réponses: 99.2%",
+        "Automations Running: 24",
+        "Welcome Completion: 87%",
+        "Response Accuracy: 99.2%",
       ],
     },
     {
-      title: "Gérez Tout depuis un Seul Tableau de Bord",
+      title: "Run Everything From One Dashboard",
       description:
-        "Gérez la modération, la musique, les tickets et les analyses sans basculer entre différents panneaux de bot déconnectés.",
+        "Manage moderation, music, tickets, and analytics without switching between disconnected bot panels.",
       bullets: [
-        "Système de commandes et permissions unifié",
-        "Logs en temps réel et flux d'activité",
-        "Synchronisation des paramètres serveur en un clic",
+        "Unified command and permission system",
+        "Real-time logs and activity streams",
+        "Server-wide settings sync in one click",
       ],
-      cta: "Ouvrir le Dashboard",
-      panelTitle: "Opérations Serveur Unifiées",
-      metrics: ["Modules Activés: 17", "Commandes Aujourd'hui: 129,402", "Disponibilité Système: 99.9%"],
+      cta: "Open Dashboard",
+      panelTitle: "Unified Server Operations",
+      metrics: ["Modules Enabled: 17", "Commands Today: 129,402", "System Uptime: 99.9%"],
     },
   ],
   testimonials: [
     {
-      quote: "Ce bot a remplacé presque tous les autres bots de notre serveur avec une latence nulle.",
+      quote: "This bot replaced almost every single bot in our server with zero latency.",
       author: "Alex K.",
-      role: "Gestionnaire de Communauté Gaming",
+      role: "Gaming Community Manager",
     },
     {
-      quote: "La configuration a pris moins de deux minutes et le système anti-nuke nous donne une tranquillité d'esprit totale.",
+      quote: "Setup took less than two minutes and the anti-nuke system gives us complete peace of mind.",
       author: "Sarah M.",
-      role: "Admin Serveur Esport",
+      role: "Esports Server Admin",
     },
     {
-      quote: "L'interface rouge et le tableau de bord sont les plus intuitifs que nous ayons jamais utilisés.",
+      quote: "The red interface and dashboard are the most intuitive we've ever used.",
       author: "Thomas R.",
-      role: "Propriétaire de Serveur Communautaire",
+      role: "Community Server Owner",
     },
   ],
   communityServers: [
@@ -257,40 +257,40 @@ export const siteConfig = {
     "Utility",
   ],
   commands: [
-    { name: "/help", description: "Affiche toutes les commandes disponibles de Rezo avec leurs descriptions.", category: "Utility", usage: "/help [commande]", permission: "Use Application Commands" },
-    { name: "/serverinfo", description: "Affiche les informations détaillées du serveur.", category: "Utility", usage: "/serverinfo", permission: "Use Application Commands" },
-    { name: "/userinfo", description: "Affiche les informations d'un membre du serveur.", category: "Utility", usage: "/userinfo [@user]", permission: "Use Application Commands" },
-    { name: "/ban", description: "Bannit un membre du serveur avec raison dans les logs d'audit.", category: "Moderation", usage: "/ban @user [raison] [jours_suppression]", permission: "Ban Members" },
-    { name: "/kick", description: "Expulse un membre du serveur.", category: "Moderation", usage: "/kick @user [raison]", permission: "Kick Members" },
-    { name: "/warn", description: "Avertit un membre avec système de sanctions automatiques.", category: "Moderation", usage: "/warn @user raison", permission: "Moderate Members" },
-    { name: "/timeout", description: "Exclut temporairement un membre des canaux textuels et vocaux.", category: "Moderation", usage: "/timeout @user durée [raison]", permission: "Moderate Members" },
-    { name: "/clear", description: "Supprime un nombre spécifique de messages dans un canal.", category: "Moderation", usage: "/clear <nombre> [@user]", permission: "Manage Messages" },
-    { name: "/lock", description: "Verrouille un canal pour empêcher les membres d'y écrire.", category: "Moderation", usage: "/lock [#canal] [raison]", permission: "Manage Channels" },
-    { name: "/unlock", description: "Déverrouille un canal précédemment verrouillé.", category: "Moderation", usage: "/unlock [#canal]", permission: "Manage Channels" },
-    { name: "/antinuke", description: "Configure les seuils anti-nuke, whitelists et actions de verrouillage.", category: "Security", usage: "/antinuke setup", permission: "Administrator" },
-    { name: "/antiraid", description: "Active la protection anti-raid avec détection automatique.", category: "Security", usage: "/antiraid enable", permission: "Administrator" },
-    { name: "/backup", description: "Crée une sauvegarde complète du serveur (rôles, canaux, permissions).", category: "Security", usage: "/backup create", permission: "Administrator" },
-    { name: "/restore", description: "Restaure une sauvegarde précédente du serveur.", category: "Security", usage: "/restore <backup_id>", permission: "Administrator" },
-    { name: "/play", description: "Joue de la musique depuis YouTube, Spotify ou SoundCloud.", category: "Music", usage: "/play <chanson ou url>", permission: "Connect & Speak" },
-    { name: "/skip", description: "Passe à la chanson suivante dans la file d'attente.", category: "Music", usage: "/skip", permission: "Connect & Speak" },
-    { name: "/queue", description: "Affiche la file d'attente musicale avec boutons interactifs.", category: "Music", usage: "/queue", permission: "Use Application Commands" },
-    { name: "/volume", description: "Ajuste le volume de lecture de la musique (0-100).", category: "Music", usage: "/volume <0-100>", permission: "Connect & Speak" },
-    { name: "/loop", description: "Active/désactive la répétition de la chanson ou file d'attente.", category: "Music", usage: "/loop [song|queue]", permission: "Connect & Speak" },
-    { name: "/welcome", description: "Configure les messages de bienvenue avec cartes personnalisées.", category: "Automation", usage: "/welcome setup", permission: "Manage Server" },
-    { name: "/autorole", description: "Définit des rôles automatiques pour les nouveaux membres.", category: "Automation", usage: "/autorole add @role", permission: "Manage Roles" },
-    { name: "/giveaway", description: "Crée un giveaway interactif avec timer et sélection aléatoire.", category: "Automation", usage: "/giveaway create", permission: "Manage Server" },
-    { name: "/level", description: "Affiche votre carte de rang et XP du serveur.", category: "Leveling", usage: "/level [@user]", permission: "Use Application Commands" },
-    { name: "/leaderboard", description: "Affiche le classement XP du serveur.", category: "Leveling", usage: "/leaderboard", permission: "Use Application Commands" },
-    { name: "/setlevel", description: "Définit le niveau XP d'un membre.", category: "Leveling", usage: "/setlevel @user <niveau>", permission: "Manage Server" },
-    { name: "/balance", description: "Affiche votre portefeuille et solde bancaire du serveur.", category: "Economy", usage: "/balance [@user]", permission: "Use Application Commands" },
-    { name: "/daily", description: "Récupère votre récompense quotidienne.", category: "Economy", usage: "/daily", permission: "Use Application Commands" },
-    { name: "/pay", description: "Envoie de l'argent à un autre membre.", category: "Economy", usage: "/pay @user <montant>", permission: "Use Application Commands" },
-    { name: "/shop", description: "Affiche la boutique du serveur avec items achetables.", category: "Economy", usage: "/shop", permission: "Use Application Commands" },
-    { name: "/ticket", description: "Crée un panneau de tickets support personnalisable.", category: "Tickets", usage: "/ticket panel", permission: "Manage Channels" },
-    { name: "/close", description: "Ferme un ticket avec transcription HTML optionnelle.", category: "Tickets", usage: "/close [raison]", permission: "Manage Channels" },
-    { name: "/poll", description: "Crée un sondage avec réactions personnalisables.", category: "Utility", usage: "/poll <question>", permission: "Use Application Commands" },
-    { name: "/embed", description: "Crée un message embed personnalisé.", category: "Utility", usage: "/embed create", permission: "Manage Messages" },
-    { name: "/avatar", description: "Affiche l'avatar d'un utilisateur en haute résolution.", category: "Utility", usage: "/avatar [@user]", permission: "Use Application Commands" },
+    { name: "/help", description: "Display all available Rezo commands with their descriptions.", category: "Utility", usage: "/help [command]", permission: "Use Application Commands" },
+    { name: "/serverinfo", description: "Display detailed server information.", category: "Utility", usage: "/serverinfo", permission: "Use Application Commands" },
+    { name: "/userinfo", description: "Display information about a server member.", category: "Utility", usage: "/userinfo [@user]", permission: "Use Application Commands" },
+    { name: "/ban", description: "Ban a member from the server with audit log reason.", category: "Moderation", usage: "/ban @user [reason] [delete_days]", permission: "Ban Members" },
+    { name: "/kick", description: "Kick a member from the server.", category: "Moderation", usage: "/kick @user [reason]", permission: "Kick Members" },
+    { name: "/warn", description: "Issue a tracked warning to a member with auto-punishment system.", category: "Moderation", usage: "/warn @user reason", permission: "Moderate Members" },
+    { name: "/timeout", description: "Temporarily exclude a member from text and voice channels.", category: "Moderation", usage: "/timeout @user duration [reason]", permission: "Moderate Members" },
+    { name: "/clear", description: "Delete a specific number of messages in a channel.", category: "Moderation", usage: "/clear <number> [@user]", permission: "Manage Messages" },
+    { name: "/lock", description: "Lock a channel to prevent members from writing.", category: "Moderation", usage: "/lock [#channel] [reason]", permission: "Manage Channels" },
+    { name: "/unlock", description: "Unlock a previously locked channel.", category: "Moderation", usage: "/unlock [#channel]", permission: "Manage Channels" },
+    { name: "/antinuke", description: "Configure anti-nuke thresholds, whitelists, and lockdown actions.", category: "Security", usage: "/antinuke setup", permission: "Administrator" },
+    { name: "/antiraid", description: "Enable anti-raid protection with automatic detection.", category: "Security", usage: "/antiraid enable", permission: "Administrator" },
+    { name: "/backup", description: "Create a complete server backup (roles, channels, permissions).", category: "Security", usage: "/backup create", permission: "Administrator" },
+    { name: "/restore", description: "Restore a previous server backup.", category: "Security", usage: "/restore <backup_id>", permission: "Administrator" },
+    { name: "/play", description: "Play music from YouTube, Spotify, or SoundCloud.", category: "Music", usage: "/play <song or url>", permission: "Connect & Speak" },
+    { name: "/skip", description: "Skip to the next song in the queue.", category: "Music", usage: "/skip", permission: "Connect & Speak" },
+    { name: "/queue", description: "Display the music queue with interactive buttons.", category: "Music", usage: "/queue", permission: "Use Application Commands" },
+    { name: "/volume", description: "Adjust music playback volume (0-100).", category: "Music", usage: "/volume <0-100>", permission: "Connect & Speak" },
+    { name: "/loop", description: "Toggle repeat for current song or queue.", category: "Music", usage: "/loop [song|queue]", permission: "Connect & Speak" },
+    { name: "/welcome", description: "Configure welcome messages with custom cards.", category: "Automation", usage: "/welcome setup", permission: "Manage Server" },
+    { name: "/autorole", description: "Set automatic roles for new members.", category: "Automation", usage: "/autorole add @role", permission: "Manage Roles" },
+    { name: "/giveaway", description: "Create an interactive giveaway with timer and random selection.", category: "Automation", usage: "/giveaway create", permission: "Manage Server" },
+    { name: "/level", description: "Display your server rank card and XP.", category: "Leveling", usage: "/level [@user]", permission: "Use Application Commands" },
+    { name: "/leaderboard", description: "Display the server XP leaderboard.", category: "Leveling", usage: "/leaderboard", permission: "Use Application Commands" },
+    { name: "/setlevel", description: "Set a member's XP level.", category: "Leveling", usage: "/setlevel @user <level>", permission: "Manage Server" },
+    { name: "/balance", description: "Display your server wallet and bank balance.", category: "Economy", usage: "/balance [@user]", permission: "Use Application Commands" },
+    { name: "/daily", description: "Claim your daily reward.", category: "Economy", usage: "/daily", permission: "Use Application Commands" },
+    { name: "/pay", description: "Send money to another member.", category: "Economy", usage: "/pay @user <amount>", permission: "Use Application Commands" },
+    { name: "/shop", description: "Display the server shop with purchasable items.", category: "Economy", usage: "/shop", permission: "Use Application Commands" },
+    { name: "/ticket", description: "Create a customizable support ticket panel.", category: "Tickets", usage: "/ticket panel", permission: "Manage Channels" },
+    { name: "/close", description: "Close a ticket with optional HTML transcript.", category: "Tickets", usage: "/close [reason]", permission: "Manage Channels" },
+    { name: "/poll", description: "Create a poll with customizable reactions.", category: "Utility", usage: "/poll <question>", permission: "Use Application Commands" },
+    { name: "/embed", description: "Create a custom embed message.", category: "Utility", usage: "/embed create", permission: "Manage Messages" },
+    { name: "/avatar", description: "Display a user's avatar in high resolution.", category: "Utility", usage: "/avatar [@user]", permission: "Use Application Commands" },
   ],
   pricing: [
     {
@@ -347,125 +347,125 @@ export const siteConfig = {
   ],
   documentation: [
     {
-      category: "Démarrage rapide",
+      category: "Quick Start",
       icon: "Rocket",
       guides: [
         {
-          title: "Installation & Configuration",
-          description: "Invitez Rezo sur votre serveur et configurez-le en moins de 2 minutes.",
+          title: "Installation & Setup",
+          description: "Invite Rezo to your server and configure it in less than 2 minutes.",
           steps: [
-            "Cliquez sur le bouton 'Ajouter à Discord' et sélectionnez votre serveur",
-            "Autorisez les permissions nécessaires pour Rezo",
-            "Utilisez /setup dans un canal pour la configuration initiale",
-            "Personnalisez les modules selon vos besoins"
+            "Click 'Add to Discord' button and select your server",
+            "Authorize the necessary permissions for Rezo",
+            "Use /setup in any channel for initial configuration",
+            "Customize modules according to your needs"
           ],
           duration: "2 min"
         },
         {
-          title: "Configuration de la sécurité",
-          description: "Activez la protection anti-nuke et anti-raid pour sécuriser votre serveur.",
+          title: "Security Configuration",
+          description: "Enable anti-nuke and anti-raid protection to secure your server.",
           steps: [
-            "Utilisez /antinuke setup pour configurer les seuils",
-            "Ajoutez des membres de confiance avec /whitelist add @user",
-            "Activez /antiraid pour la protection automatique",
-            "Configurez les alertes de sécurité dans un canal dédié"
+            "Use /antinuke setup to configure thresholds",
+            "Add trusted members with /whitelist add @user",
+            "Enable /antiraid for automatic protection",
+            "Configure security alerts in a dedicated channel"
           ],
           duration: "5 min"
         },
         {
-          title: "Système de bienvenue",
-          description: "Créez des messages de bienvenue personnalisés avec cartes graphiques.",
+          title: "Welcome System",
+          description: "Create personalized welcome messages with graphic cards.",
           steps: [
-            "Utilisez /welcome setup dans le canal souhaité",
-            "Personnalisez le message avec des variables {user}, {server}",
-            "Configurez une carte de bienvenue avec /welcome card",
-            "Testez avec /welcome test"
+            "Use /welcome setup in the desired channel",
+            "Customize the message with variables {user}, {server}",
+            "Configure a welcome card with /welcome card",
+            "Test with /welcome test"
           ],
           duration: "3 min"
         }
       ]
     },
     {
-      category: "Modération",
+      category: "Moderation",
       icon: "Shield",
       guides: [
         {
-          title: "Commandes de modération essentielles",
-          description: "Maîtrisez les outils de modération pour gérer votre communauté.",
+          title: "Essential Moderation Commands",
+          description: "Master moderation tools to manage your community.",
           steps: [
-            "/ban @user [raison] - Bannir un membre",
-            "/kick @user [raison] - Expulser un membre",
-            "/warn @user raison - Avertir un membre",
-            "/timeout @user durée - Exclure temporairement",
-            "/clear nombre [@user] - Supprimer des messages"
+            "/ban @user [reason] - Ban a member",
+            "/kick @user [reason] - Kick a member",
+            "/warn @user reason - Warn a member",
+            "/timeout @user duration - Temporarily exclude",
+            "/clear number [@user] - Delete messages"
           ],
           duration: "5 min"
         },
         {
-          title: "AutoMod & Filtres",
-          description: "Configuration des filtres automatiques et détection de spam.",
+          title: "AutoMod & Filters",
+          description: "Configure automatic filters and spam detection.",
           steps: [
-            "Utilisez /automod setup pour activer les filtres",
-            "Configurez les filtres anti-spam, anti-lien, anti-mention",
-            "Définissez les sanctions automatiques par niveaux",
-            "Ajoutez des mots interdits personnalisés"
+            "Use /automod setup to enable filters",
+            "Configure anti-spam, anti-link, anti-mention filters",
+            "Set automatic punishments by levels",
+            "Add custom forbidden words"
           ],
           duration: "10 min"
         }
       ]
     },
     {
-      category: "Musique",
+      category: "Music",
       icon: "Headphones",
       guides: [
         {
-          title: "Lecture de musique",
-          description: "Utilisez Rezo comme lecteur de musique haute qualité.",
+          title: "Music Playback",
+          description: "Use Rezo as a high-quality music player.",
           steps: [
-            "/play <chanson> - Jouer une chanson ou URL",
-            "/queue - Voir la file d'attente",
-            "/skip - Passer à la suivante",
-            "/volume 50 - Ajuster le volume",
-            "/loop queue - Répéter la file d'attente"
+            "/play <song> - Play a song or URL",
+            "/queue - View the queue",
+            "/skip - Skip to next",
+            "/volume 50 - Adjust volume",
+            "/loop queue - Repeat the queue"
           ],
           duration: "2 min"
         },
         {
-          title: "Fonctionnalités avancées",
-          description: "Filtres audio et contrôle de qualité.",
+          title: "Advanced Features",
+          description: "Audio filters and quality control.",
           steps: [
-            "Utilisez /filter bassboost pour renforcer les basses",
-            "Activez le mode 8D avec /filter 8d",
-            "Mode nightcore avec /filter nightcore",
-            "Configurez la qualité audio dans les paramètres"
+            "Use /filter bassboost to enhance bass",
+            "Enable 8D mode with /filter 8d",
+            "Nightcore mode with /filter nightcore",
+            "Configure audio quality in settings"
           ],
           duration: "3 min"
         }
       ]
     },
     {
-      category: "Économie & Niveaux",
+      category: "Economy & Levels",
       icon: "Coins",
       guides: [
         {
-          title: "Système de niveaux",
-          description: "Activez le système XP et récompenses pour engager votre communauté.",
+          title: "Leveling System",
+          description: "Enable XP system and rewards to engage your community.",
           steps: [
-            "Activez le système XP avec /leveling setup",
-            "Configurez les récompenses de rôles par niveaux",
-            "Personnalisez les cartes de rang avec /rank customize",
-            "Consultez le classement avec /leaderboard"
+            "Enable XP system with /leveling setup",
+            "Configure role rewards by levels",
+            "Customize rank cards with /rank customize",
+            "Check leaderboard with /leaderboard"
           ],
           duration: "8 min"
         },
         {
-          title: "Économie du serveur",
-          description: "Créez une économie virtuelle pour votre serveur.",
+          title: "Server Economy",
+          description: "Create a virtual economy for your server.",
           steps: [
-            "Activez l'économie avec /economy setup",
-            "Créez une boutique avec /shop create",
-            "Ajoutez des items achetables",
-            "Les membres gagnent de l'argent avec /daily, /work"
+            "Enable economy with /economy setup",
+            "Create a shop with /shop create",
+            "Add purchasable items",
+            "Members earn money with /daily, /work"
           ],
           duration: "10 min"
         }
@@ -476,30 +476,30 @@ export const siteConfig = {
       icon: "Ticket",
       guides: [
         {
-          title: "Système de tickets",
-          description: "Configurez un système de support professionnel.",
+          title: "Ticket System",
+          description: "Set up a professional support system.",
           steps: [
-            "Créez un panneau de tickets avec /ticket panel",
-            "Personnalisez les catégories de tickets",
-            "Définissez les rôles staff autorisés",
-            "Les tickets se ferment avec /close et génèrent des transcriptions"
+            "Create a ticket panel with /ticket panel",
+            "Customize ticket categories",
+            "Define authorized staff roles",
+            "Tickets close with /close and generate transcripts"
           ],
           duration: "7 min"
         }
       ]
     },
     {
-      category: "API & Intégrations",
+      category: "API & Integrations",
       icon: "Code",
       guides: [
         {
           title: "Webhooks & Logs",
-          description: "Intégrez Rezo avec des services externes.",
+          description: "Integrate Rezo with external services.",
           steps: [
-            "Configurez les logs d'audit avec /logging setup",
-            "Créez des webhooks personnalisés pour les événements",
-            "Intégrez avec votre site web via l'API",
-            "Consultez la documentation API complète"
+            "Configure audit logs with /logging setup",
+            "Create custom webhooks for events",
+            "Integrate with your website via API",
+            "View complete API documentation"
           ],
           duration: "15 min"
         }
@@ -508,28 +508,28 @@ export const siteConfig = {
   ],
   faqs: [
     {
-      q: "Le bot est-il gratuit à ajouter sur mon serveur Discord ?",
-      a: "Oui ! Vous pouvez inviter le bot gratuitement avec un accès complet aux commandes de modération de base, musique, niveaux, automod et utilitaires sans carte de crédit.",
+      q: "Is the bot free to add to my Discord server?",
+      a: "Yes! You can invite the bot for free with full access to core moderation, music, leveling, basic automod, and utility commands without entering a credit card.",
     },
     {
-      q: "Comment le système Anti-Nuke empêche-t-il la destruction du serveur ?",
-      a: "Notre module Anti-Nuke surveille continuellement les actions administratives. Si un compte compromis ou un admin malveillant supprime des canaux, expulse des membres ou modifie des rôles au-dessus des seuils configurés, le bot révoque immédiatement les permissions, restaure les éléments supprimés via la restauration d'audit, et notifie les propriétaires.",
+      q: "How does the Anti-Nuke system prevent server destruction?",
+      a: "Our Anti-Nuke module continuously monitors administrative actions. If a compromised account or rogue admin deletes channels, kicks members, or modifies roles above configured thresholds, the bot immediately revokes permissions, restores deleted items via audit rollback, and notifies owners.",
     },
     {
-      q: "Combien de temps prend la configuration ?",
-      a: "La configuration prend moins de 2 minutes. Une fois invité, exécutez `/setup` dans n'importe quel canal ou visitez notre tableau de bord web pour activer la sécurité, les auto-rôles et la journalisation en un clic.",
+      q: "How long does setup take?",
+      a: "Setup takes less than 2 minutes. Once invited, run `/setup` in any channel or visit our web dashboard to enable security, autoroles, and logging in one click.",
     },
     {
-      q: "Puis-je gérer plusieurs serveurs Discord depuis un seul tableau de bord ?",
-      a: "Oui. Notre tableau de bord web vous permet de basculer facilement entre tous les serveurs où vous avez les permissions Gérer le serveur ou Administrateur, avec des configurations de serveur isolées.",
+      q: "Can I manage multiple Discord servers from one dashboard?",
+      a: "Yes. Our web dashboard lets you seamlessly toggle between all servers where you have Manage Server or Administrator permissions, with isolated server configurations.",
     },
     {
-      q: "La lecture de musique fonctionne-t-elle 24h/24 et 7j/7 sans lag ?",
-      a: "Oui. Nos nœuds audio fonctionnent sur des clusters cloud européens et nord-américains à faible latence prenant en charge YouTube, Spotify et SoundCloud avec bass boost, nightcore et filtres d'égaliseur 8D.",
+      q: "Does music playback work 24/7 without lag?",
+      a: "Yes. Our audio nodes run on low-latency European and North American cloud clusters supporting YouTube, Spotify, and SoundCloud with bass boost, nightcore, and 8D equalizer filters.",
     },
     {
-      q: "Comment puis-je obtenir de l'aide si je rencontre un problème ?",
-      a: "Vous pouvez rejoindre notre communauté Discord de support 24h/24 et 7j/7, lire notre documentation complète, ou ouvrir un ticket de support directement depuis le tableau de bord.",
+      q: "How do I get help if I run into an issue?",
+      a: "You can join our 24/7 Discord support community, read our comprehensive documentation, or open a support ticket directly from the dashboard.",
     },
   ],
 };
